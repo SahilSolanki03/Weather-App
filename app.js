@@ -26,9 +26,9 @@ btn.addEventListener("click", async (evt) =>{
     let res = await response.json();
     console.log(res);
 
-    cityoutput.innerText=` weather of ${res["name"]} city`;
+    cityoutput.innerText=` Weather of ${res["name"]} city`;
     discription.innerText=`Sky condition: ${res["weather"][0]["description"]}`;
     let newTemp = tempcon(res["main"]["temp"]);
-    temp.innerText=`Temprater: ${newTemp}`;
+    temp.innerText=`Temprater: ${newTemp} c`;
     wind.innerText=`Wind Speed: ${res["wind"]["speed"]}`;
 });
